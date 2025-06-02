@@ -30,24 +30,4 @@ if (isset($_POST["login"])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Connexion</title>
-    <link rel="stylesheet" href="login.css">
-    <style>
-        
-    </style>
-</head>
-<body>
-    <div class="login-box">
-        <form action="login.php" method="post">
-            <input name="username" placeholder="nom d'utilisateur" value="<?php echo isset($username) ? htmlspecialchars($username) : '' ?>">
-            <input name="password" type="password" placeholder="mot de passe">
-            <input name="login" type="submit" value="connexion">
-        </form>
-        <p class="error"><?php echo $error; ?></p>
-    </div>
-</body>
-</html>
+
