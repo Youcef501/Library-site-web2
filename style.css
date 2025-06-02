@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 70px;
+  margin-right: 10px;
+  
+}
+
+.search-bar {
+  display: flex;
+  flex: 0.8;
+  margin: 0 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  background-color: #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-bar button {
+  margin-left: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-accueil {
+  background-color: #a22c2c;
+}
+
+.btn-bibli {
+  background-color: #f48787;
+  color: #000;
+}
+
+.btn-panier {
+  background-color: #8b1f1f;
+}
+
+.btn-login {
+  background-color: #222;
+}
+
+
+
+
+
+/* Container panier vide */
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+}
+
+.empty-content {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.empty-content img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.empty-content h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.empty-content p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.browse-btn {
+  background-color: #0066c0;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.browse-btn:hover {
+  background-color: #0055a0;
+}
+
+/* Container panier avec articles */
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none; /* Caché par défaut */
+}
+
+.cart-items {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.book-cover {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  margin: 0 0 5px 0;
+  color: #0066c0;
+}
+
+.author {
+  color: #666;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+}
+
+.stock {
+  color: #008a00;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #008a00;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-input {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cart-summary {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 18px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #FFD814;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #F7CA00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+  }
+  
+  .book-cover {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+  
+  .price-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+
+
+

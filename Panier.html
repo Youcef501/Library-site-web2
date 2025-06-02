@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>ECE Bibliothèque</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="gghkjhk.PNG" alt="Logo" />
+    <div>
+      <strong></strong><br>
+      <small></small>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Chercher un livre, un auteur, un éditeur…">
+    <button>+</button>
+  </div>
+
+  <div class="nav-buttons">
+    <button class="btn-accueil">Accueil</button>
+    <button class="btn-bibli">Bibliothèque</button>
+    <button class="btn-panier">Panier <i class="fas fa-shopping-cart"></i></button>
+    <button class="btn-login">Login <i class="fas fa-user"></i></button>
+  </div>
+</header>
+
+
+
+
+<!-- Container panier vide -->
+  <div id="empty-cart-container" class="empty-container">
+    <div class="empty-content">
+      <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="Panier vide">
+      <h2>Votre panier est vide</h2>
+      <p>Commencez votre shopping pour découvrir nos livres</p>
+      <button id="browse-books" class="browse-btn">Parcourir la bibliothèque</button>
+    </div>
+  </div>
+
+  <!-- Container panier avec articles -->
+  <div id="cart-items-container" class="cart-container">
+    <h1>Mon Panier</h1>
+    
+    <div class="cart-items">
+      <!-- Exemple d'article 1 -->
+      <div class="cart-item" data-price="16.5">
+        <img src="L1.PNG" alt="Mist & Mountains" class="book-cover">
+        <div class="item-details">
+          <h3>MIST & MOUNTAINS</h3>
+          <p class="author">de Patrick Coulcher (Auteur)</p>
+          <p class="stock"><span class="dot"></span> En stock</p>
+          <div class="price-section">
+            <span class="price">16,50 €</span>
+            <div class="quantity">
+              <label>Quantité</label>
+              <input type="number" value="1" min="1" class="qty-input">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exemple d'article 2 -->
+      <div class="cart-item" data-price="15.5">
+        <img src="L2.PNG" alt="Forest Journey" class="book-cover">
+        <div class="item-details">
+          <h3>Forest Journey</h3>
+          <p class="stock"><span class="dot"></span> En stock</p>
+          <div class="price-section">
+            <span class="price">15,50 €</span>
+            <div class="quantity">
+              <label>Quantité</label>
+              <input type="number" value="1" min="1" class="qty-input">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <h2>Résumé de la commande</h2>
+      <div class="summary-row">
+        <span>Nombre d'articles</span>
+        <span id="total-items">2</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="total-price">32,00 €</span>
+      </div>
+      <button class="checkout-btn">Passer la commande</button>
+    </div>
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
