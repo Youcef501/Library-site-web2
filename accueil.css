@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+  margin-right: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.search-bar input {
+  padding: 8px 15px;
+  border-radius: 25px; 
+  border: 1px solid #cccccc;
+  outline: none;
+  width: 300px;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  background-color: #423a3a3a;
+  color: rgb(7, 6, 6);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+
+.btn-accueil{
+    background-color: #d95a5ad4;
+    color: #030303;
+}
+
+.btn-bibli,
+.btn-panier,
+.btn-login{
+     background-color: #b01818;
+  color: rgb(7, 7, 7);
+}
+
+.nav-buttons button {
+  border: none;
+  margin-left: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+main {
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: block;
+}
