@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config.php'; // doit contenir la connexion $conn à la base de données
+require 'config.php'; // Doit contenir $pdo = new PDO(...);
 
 $error = '';
 
@@ -19,34 +19,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
     } elseif ($password !== $confirm_password) {
         $error = "Les mots de passe ne correspondent pas.";
     } else {
-        // Vérifie si l'utilisateur existe déjà
+        // Vérifier si l'utilisateur existe déjà
         $stmt = $pdo->prepare("SELECT id FROM enregistrement WHERE email = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $stmt->store_result();
+        $stmt->execute([$email]);
 
-        if ($stmt->num_rows > 0) {
+        if ($stmt->fetch()) {
             $error = "Un compte existe déjà avec cet e-mail.";
         } else {
             // Hacher le mot de passe
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             // Insérer dans la base de données
-            $insert_stmt = $pdo->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
-            $insert_stmt->bind_param("ss", $email, $hashed_password);
-            if ($insert_stmt->execute()) {
-                // Rediriger vers la page de connexion ou une autre page
+            $insert_stmt = $pdo->prepare("INSERT INTO enregistrement (email, password) VALUES (?, ?)");
+            if ($insert_stmt->execute([$email, $hashed_password])) {
+                // Rediriger vers la page de connexion
                 header("Location: login.php?registered=1");
                 exit();
             } else {
                 $error = "Erreur lors de l'inscription. Veuillez réessayer.";
             }
         }
-
-        $stmt->close();
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
