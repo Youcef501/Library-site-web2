@@ -37,9 +37,9 @@ $derniere_chance = $pdo->query("SELECT books.*, author.nom, author.prenom FROM b
   </div>
 
   <div class="nav-buttons">
-    <button class="btn-accueil">Accueil</button>
-    <button class="btn-bibli">Bibliothèque</button>
-    <button class="btn-panier">Panier <i class="fas fa-shopping-cart"></i></button>
+    <a href="accueil.html"><button class="btn-accueil">Accueil</button></a>
+    <a href="bibliotheque.html"><button class="btn-bibli">Bibliothèque</button></a>
+    <a href="Panier.html"><button class="btn-panier">Panier <i class="fas fa-shopping-cart"></i></button></a>
     <button class="btn-login">Login <i class="fas fa-user"></i></button>
   </div>
 </header>
