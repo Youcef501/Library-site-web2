@@ -60,6 +60,10 @@ $derniere_chance = $pdo->query("SELECT books.*, author.nom, author.prenom FROM b
                 <h5 class="card-title"><?= htmlspecialchars($book['title']) ?></h5>
                 <p class="card-text">Auteur : <?= htmlspecialchars($book['nom']) ?> <?= htmlspecialchars($book['prenom']) ?></p>
                 <p class="card-text"><small class="text-muted">Ajouté le <?= $book['date'] ?></small></p>
+                <button class="btn-ajouter-panier" 
+                data-id="<?= $book['id'] ?>" 
+                data-title="<?= htmlspecialchars($book['title']) ?>" 
+                data-price="<?= $book['price'] ?>">Ajouter au panier</button>
             </div>
         </div>
     <?php endforeach; ?>
@@ -75,10 +79,37 @@ $derniere_chance = $pdo->query("SELECT books.*, author.nom, author.prenom FROM b
                 <h5 class="card-title"><?= htmlspecialchars($book['title']) ?></h5>
                 <p class="card-text">Auteur : <?= htmlspecialchars($book['nom']) ?> <?= htmlspecialchars($book['prenom']) ?></p>
                 <p class="card-text"><small class="text-muted">Ajouté le <?= $book['date'] ?></small></p>
+                <button class="btn-ajouter-panier" 
+                  data-id="<?= $book['id'] ?>" 
+                  data-title="<?= htmlspecialchars($book['title']) ?>" 
+                  data-price="<?= $book['price'] ?>">Ajouter au panier</button>
             </div>
         </div>
     <?php endforeach; ?>
 </div>
 
+
+<script>
+let panier = [];
+
+document.querySelectorAll('.btn-ajouter-panier').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const id = btn.dataset.id;
+        const title = btn.dataset.title;
+        const price = parseFloat(btn.dataset.price);
+
+        // Vérifie si le livre est déjà dans le panier
+        const existing = panier.find(item => item.id === id);
+        if (existing) {
+            existing.quantity += 1;
+        } else {
+            panier.push({ id, title, price, quantity: 1 });
+        }
+
+        alert(`"${title}" a été ajouté au panier.`);
+    });
+});
+
+</script>
 </body>
 </html>
