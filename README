@@ -1,1 +1,58 @@
-#Monprojet
+# 📚 Projet : Site Web de Vente et d'Achat de Livres
+
+Ce site web permet aux utilisateurs de vendre et d'acheter des livres en ligne.  
+Il propose une bibliothèque de livres où chaque utilisateur peut parcourir les ouvrages, les ajouter à son panier, et passer commande.  
+
+---
+
+## 🚀 Installation
+
+1. Cloner le dépôt :
+    ```bash
+    git clone https://github.com/ton-utilisateur/Library-site-web2.git
+    ```
+
+2. Ouvrir le dossier du projet avec votre éditeur préféré (exemple : Visual Studio Code).
+
+3. Lancer le site en ouvrant le fichier `index.html` dans un navigateur.  
+(Si le site utilise PHP/MySQL, il faudra le placer dans un serveur local comme XAMPP, WAMP, ou MAMP.)
+
+---
+
+## ⚙️ Fonctionnalités
+
+- Créer un compte utilisateur (inscription / connexion)
+- Ajouter un livre à la vente
+- Rechercher des livres dans la bibliothèque
+- Ajouter des livres au panier
+- Acheter des livres en ligne
+- Gestion des commandes
+
+---
+
+## 📂 Structure du projet
+
+- `index.html` : page d'accueil
+- `login.html` / `register.html` : pages de connexion et d'inscription
+- `bibliotheque.html` : page listant les livres disponibles
+- `panier.html` : page panier
+- `ajouter_livre.html` : page pour ajouter un nouveau livre
+- Dossier `css/` : fichiers de style
+- Dossier `js/` : scripts JavaScript
+- Dossier `images/` : images du site
+
+---
+
+## 🙋‍♂️ Auteurs
+
+Youssef Ben Hssan
+sebastain
+victor 
+edouar
+aziz
+
+---
+
+## 📄 Licence
+
+Ce projet est à usage personnel / éducatif (tu peux préciser une licence si besoin).
