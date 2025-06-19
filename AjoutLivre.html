@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Livre</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="gghkjhk.PNG" alt="Logo" />
+        <div>
+            <strong></strong><br>
+            <small></small>
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Chercher un livre, un auteur, un éditeur…">
+        <a href="AjoutLivre.html"><button>+</button></a> </div>
+
+    <div class="nav-buttons">
+        <a href="accueil.html"><button class="btn-accueil">Accueil</button></a>
+        <a href="library.html"><button class="btn-bibli">Bibliothèque</button></a>
+        <a href="Panier.html"><button class="btn-panier">Panier <i class="fas fa-shopping-cart"></i></button></a>
+        <a href="login_static.html"><button class="btn-login">Login <i class="fas fa-user"></i></button></a>
+    </div>
+</header>
+
+<div class="add-book-section">
+    <div class="form-container">
+        <form action="add-book.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="titre" id="titre" class="input_ajoutLivre" placeholder="Titre">
+            <input type="text" name="nom_auteur" id="nom_auteur" class="input_ajoutLivre" placeholder="Nom et prénom du l'auteur">
+            <input type="text" name="editeur" id="editeur" class="input_ajoutLivre" placeholder="Editeur">
+            <input type="text" name="date_pub" id="date_pub" class="input_ajoutLivre" placeholder="Date de Publication">
+            <input type="file" accept="image/*" name="cover" id="cover" class="input_ajoutLivre file-input-style">
+            <input type="text" name="prix_livre" id="prix_livre" class="input_ajoutLivre" placeholder="Prix">
+            <input type="submit" name="ajout_livre" id="ajout_livre" value="Ajouter">
+        </form>
+    </div>
+
+    <div class="book-preview">
+        <h3>Photo de couverture</h3>
+        <img id="previewCover" src="#" alt="Book Cover" class="preview-cover">
+        <h4 id="previewTitle">Aucun Titre</h4>
+        <p id="previewPrice"> Prix</p>
+    </div>
+</div>
+
+<script>
+    const coverInput = document.getElementById('cover');
+    const titleInput = document.getElementById('titre');
+    const priceInput = document.getElementById('prix_livre');
+
+    const previewCover = document.getElementById('previewCover');
+    const previewTitle = document.getElementById('previewTitle');
+    const previewPrice = document.getElementById('previewPrice');
+
+    // Update image preview
+    coverInput.addEventListener('change', function(event) {
+        const [file] = event.target.files;
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewCover.src = e.target.result;
+                previewCover.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            previewCover.src = '#';
+            previewCover.style.display = 'none';
+        }
+    });
+
+    // Update title preview
+    titleInput.addEventListener('input', function() {
+        previewTitle.textContent = this.value || 'Aucun Titre';
+    });
+
+    // Update price preview
+    priceInput.addEventListener('input', function() {
+        previewPrice.textContent = (this.value ? `Prix: ${this.value} €` : 'Prix');
+    });
+</script>
+</body>
+</html>
