@@ -12,7 +12,7 @@ Il propose une bibliothèque de livres où chaque utilisateur peut parcourir les
     git clone https://github.com/ton-utilisateur/Library-site-web2.git
     ```
 
-2. Ouvrir le dossier du projet avec votre éditeur préféré (exemple : Visual Studio Code).
+2. Ouvrir le dossier du projet avec votre éditeur (exemple : Visual Studio Code).
 
 3. Lancer le site en ouvrant le fichier `index.html` dans un navigateur.  
 (Si le site utilise PHP/MySQL, il faudra le placer dans un serveur local comme XAMPP, WAMP, ou MAMP.)
@@ -32,8 +32,8 @@ Il propose une bibliothèque de livres où chaque utilisateur peut parcourir les
 
 ## 📂 Structure du projet
 
-- `index.html` : page d'accueil
-- `login.html` / `register.html` : pages de connexion et d'inscription
+- `accueil.html`,'accueil.css' : page d'accueil
+- `login.php`,'login.css' / `register.php` ,'register.css': pages de connexion et d'inscription
 - `bibliotheque.html` : page listant les livres disponibles
 - `panier.html` : page panier
 - `ajouter_livre.html` : page pour ajouter un nouveau livre
@@ -46,13 +46,13 @@ Il propose une bibliothèque de livres où chaque utilisateur peut parcourir les
 ## 🙋‍♂️ Auteurs
 
 Youssef Ben Hssan
-sebastain
-victor 
-edouar
-aziz
+Sebastain Popovici
+Victor Bondain 
+Edouar Aernouts
+Aziz Fennani
 
 ---
 
 ## 📄 Licence
 
-Ce projet est à usage personnel / éducatif (tu peux préciser une licence si besoin).
+Ce projet est à usage personnel éducatif.
