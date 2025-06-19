@@ -1,0 +1,557 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* A light background for the whole page */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+  margin-right: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 1px solid #cccccc;
+  outline: none;
+  width: 300px;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  background-color: #423a3a3a;
+  color: rgb(7, 6, 6);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.btn-accueil {
+    background-color: #d95a5ad4;
+    color: #030303;
+}
+
+.btn-bibli,
+.btn-panier,
+.btn-login {
+     background-color: #b01818;
+  color: rgb(7, 7, 7);
+}
+
+.nav-buttons button {
+  border: none;
+  margin-left: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Main image styling for accueil.html */
+main {
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Styling for AjoutLivre.html */
+.add-book-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 50px;
+    background-color: #f8f8f8;
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input_ajoutLivre {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.input_ajoutLivre::placeholder {
+    color: #aaa;
+}
+
+.file-input-style {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+#ajout_livre {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ajout_livre:hover {
+    background-color: #45a049;
+}
+
+.book-preview {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.preview-cover {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    display: none; /* Hidden by default until an image is selected */
+    border-radius: 5px;
+}
+
+#previewTitle {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#previewPrice {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+
+/* Styling for login and register pages */
+.login-body { /* Added a class to the body for specific login/register page background */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: sans-serif;
+    background-image: url("ECEBI.PNG"); /* Adjust path if necessary for static HTML */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.80);
+    margin: 50px;
+    margin-left: 680px;
+    margin-top : 200px;
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.login-box .login {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+.login-box .login:hover {
+    background-color: #24d327;
+}
+
+.login-box .error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-box .sub {
+    width: 120px;
+    text-align: center;
+    margin-left: 85px;
+    background-color: #444;
+    color:white;
+}
+.login-box .sub:hover{
+    background-color: #24d327;
+}
+
+/* Styling for Panier.html */
+.empty-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer */
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.empty-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.empty-content img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.empty-content h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.empty-content p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.browse-btn {
+    background-color: #b01818;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.browse-btn:hover {
+    background-color: #8b1313;
+}
+
+.cart-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cart-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.cart-items {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+}
+
+.cart-item:first-child {
+    border-top: none;
+}
+
+.book-cover {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.item-details .author {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.item-details .stock {
+    color: #28a745;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.item-details .stock .dot {
+    height: 8px;
+    width: 8px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price-section .price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #b01818;
+}
+
+.quantity label {
+    margin-right: 10px;
+    color: #555;
+}
+
+.qty-input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cart-summary {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.cart-summary h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.summary-row.total {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    border-top: 1px dashed #ddd;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.checkout-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+/* NEW STYLES for library.html */
+.library-section-container {
+    background-color: #ffffff;
+    border-radius: 12px; /* Increased border-radius for the main container */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Stronger shadow */
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1200px; /* Aligned with overall container width */
+}
+
+.library-section-container h3 {
+    text-align: left;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 1.8em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.books-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive grid for books */
+    gap: 25px; /* Space between book items */
+    justify-items: center; /* Center items in the grid */
+    padding-bottom: 20px; /* Space before the hr */
+}
+
+.book-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; /* Border-radius for individual book cards */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Shadow for individual book cards */
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Make card fill its grid space */
+    max-width: 200px; /* Max width for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes price to bottom */
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.book-card img {
+    max-width: 100%;
+    height: 180px; /* Fixed height for covers to make them uniform */
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #f0f0f0;
+}
+
+.book-card h4 { /* Changed from h5 to h4 for better hierarchy */
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+    min-height: 2.2em; /* Ensure consistent height even for short titles */
+}
+
+.book-card .book-author {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.book-card .book-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #b01818; /* Red price */
+    margin-top: auto; /* Pushes price to the bottom */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-5 {
+    margin-top: 40px !important; /* Adjusted margin */
+    margin-bottom: 40px !important; /* Adjusted margin */
+}
+
+/* Remove or adjust old .card, .card-body, etc., if no longer needed for library.html */
+.card {
+    /* Keeping original .card for other potential uses if needed, but new .book-card is specific */
+    /* You might remove this if no other part of your site uses these generic card styles in this way */
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.card-title {
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    margin-bottom: .5rem;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+/* Add this to your style.css */
+
+.add-to-cart-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px; /* Space above the button */
+    width: 90%; /* Make button almost full width of card */
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
